@@ -1,0 +1,26 @@
+---
+import logoLight from "../assets/logo-light.svg";
+---
+
+<footer>
+  <img src={logoLight.src} alt="Logo" />
+  <button class="btn btn-purple">Get Started</button>
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #13183f;
+    padding-block: 24px;
+  }
+
+  img {
+    height: 20px;
+
+    @media screen and (min-width: 1280px) {
+      height: 28px;
+    }
+  }
+</style>

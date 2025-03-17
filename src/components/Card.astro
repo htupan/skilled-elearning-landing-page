@@ -1,0 +1,79 @@
+---
+interface Props {
+  iconPathSrc?: string;
+  iconAlt?: string;
+  title?: string;
+  description?: string;
+  ctaText?: string;
+  ctaLink?: string;
+}
+
+const { iconPathSrc, iconAlt, title, description, ctaText, ctaLink="#" } = Astro.props;
+---
+
+<div class="card">
+  <div class="card-image">
+    <img src={iconPathSrc} alt={iconAlt} />
+  </div>
+  <div class="card-content card-shadow">
+    <h3>{title}</h3>
+    <p>{description}</p>
+    <a href={ctaLink} class="btn-link cta">{ctaText}</a>
+  </div>
+</div>
+
+<style>
+  .card {
+    position: relative;
+  }
+
+  .card-image {
+    position: absolute;
+    padding-left: 32px;
+    margin-bottom: -28px;
+    height: 56px;
+    top: -28px
+  }
+
+  .card-content {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding-inline: 32px;
+    padding-top: 64px;
+    padding-bottom: 40px;
+    border-radius: 15px;
+    gap: 24px;
+    flex-grow: 1;
+    height: 100%;
+    box-sizing: border-box;
+    flex: 1;
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: #13183f;
+
+      @media screen and (min-width: 1280px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.5;
+      color: #83869a;
+
+      @media screen and (min-width: 768px) {
+        font-size: 1.125rem;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .cta {
+    margin-top: auto;
+  }
+</style>

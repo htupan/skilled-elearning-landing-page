@@ -1,0 +1,31 @@
+---
+import logoDark from "../assets/logo-dark.svg";
+---
+
+<header>
+  <img src={logoDark.src} alt="Logo" />
+  <button class="btn btn-black">Get Started</button>
+</header>
+
+<style>
+  header {
+    padding-block: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+
+    @media screen and (min-width: 768px) {
+      padding-block: 24px;
+    }
+  }
+
+  img {
+    height: 20px;
+
+    @media screen and (min-width: 1280px) {
+      height: 28px;
+    }
+  }
+</style>

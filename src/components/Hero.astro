@@ -1,0 +1,109 @@
+---
+import HeroImageMobile from "../assets/image-hero-mobile@2x.webp";
+import HeroImageTablet from "../assets/image-hero-tablet@2x.webp";
+import HeroImageDesktop from "../assets/image-hero-desktop@2x.webp";
+---
+
+<section>
+  <div class="content">
+    <div class="texts">
+      <h1 class="text">Maximize skill, minimize budget</h1>
+      <p class="text">Our modern courses across a range of in-demand skills will give you the knowledge you need to live the life you want.</p>
+    </div>
+    <button class="btn btn-orange">Get Started</button>
+  </div>
+  <div class="placeholder" />
+  <picture>
+    <source media="(min-width:1280px" srcset={HeroImageDesktop.src} />
+    <source media="(min-width:768px" srcset={HeroImageTablet.src} />
+    <img src={HeroImageMobile.src} alt="Hero image" />
+  </picture>
+</section>
+
+<style>
+  section {
+    padding-block: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    position: relative;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      gap: 24px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      gap: 32px;
+    }
+  }
+
+  .content {
+    flex: 1;
+  }
+
+  .texts + .btn {
+    margin-top: 40px
+  }
+
+  .text + .text {
+    margin-top: 24px
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #13183f;
+
+    @media screen and (min-width: 1280px) {
+      font-size: 3.5rem;
+    }
+  }
+
+  .placeholder {
+    flex: 1;
+
+    @media screen and (min-width: 1280px) {
+      height: 560px;
+    }
+  }
+
+  p {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #83869A;
+  }
+
+  picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      right: -228px;
+      top: -132px;
+      z-index: 0;
+    }
+
+    @media screen and (min-width: 1280px) {
+      right: -420px;
+      top: -248px;
+    }
+  }
+
+  img {
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+      width: auto;
+      height: 584px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      height: 936px;
+    }
+  }
+</style>

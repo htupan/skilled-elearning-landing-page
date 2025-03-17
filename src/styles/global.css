@@ -1,0 +1,83 @@
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+header,
+section,
+footer {
+  padding-inline: 20px;
+  @media screen and (min-width: 768px) {
+    padding-inline: 44px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-inline: 80px;
+  }
+}
+
+:global(button) {
+  
+}
+
+button,
+a { 
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-family: "Plus Jakarta Sans,", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  transition: opacity 0.3s ease;
+  
+  &.btn {
+    padding: 16px 32px;
+    border-radius: 28px;
+
+    @media screen and (min-width: 768px) and (max-width: 1279px)
+    {
+      &.btn-black,
+      &.btn-orange {
+        padding: 12px 24px;
+      }
+    }
+
+    &.btn-black {
+      background: #13183F;
+      color: #fff;
+    }
+
+    &.btn-orange {
+      background: linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
+      color: #fff;
+    }
+
+    &.btn-purple {
+      background: linear-gradient(180deg, #4851ff 0%, #f02aa6 100%);
+      color: #fff;
+
+      @media screen and (max-width: 1279px) {
+        padding: 12px 24px;
+      }
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &.btn-link {
+    color: #f74780;
+    text-decoration: none;
+
+    &:hover {
+      color: #ffa7c3;
+    }
+  }
+}
+
+.card-shadow {
+  box-shadow: 0 25px 50px 0 rgba(6, 22, 141, 0.0442);
+}
