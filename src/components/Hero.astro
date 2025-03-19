@@ -4,7 +4,7 @@ import HeroImageTablet from "../assets/image-hero-tablet@2x.webp";
 import HeroImageDesktop from "../assets/image-hero-desktop@2x.webp";
 ---
 
-<section>
+<section aria-label="Hero">
   <div class="content">
     <div class="texts">
       <h1 class="text">Maximize skill, minimize budget</h1>
@@ -27,6 +27,7 @@ import HeroImageDesktop from "../assets/image-hero-desktop@2x.webp";
     flex-direction: column;
     gap: 48px;
     position: relative;
+    align-items: center;
 
     @media screen and (min-width: 768px) {
       flex-direction: row;
@@ -40,6 +41,16 @@ import HeroImageDesktop from "../assets/image-hero-desktop@2x.webp";
 
   .content {
     flex: 1;
+  }
+
+  .texts {
+    @media screen and (min-width: 768px) {
+      max-width: 316px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      max-width: 442px;
+    }
   }
 
   .texts + .btn {
@@ -64,6 +75,10 @@ import HeroImageDesktop from "../assets/image-hero-desktop@2x.webp";
   .placeholder {
     flex: 1;
 
+    @media screen and (min-width: 768px) {
+      height: 400px;
+    }
+
     @media screen and (min-width: 1280px) {
       height: 560px;
     }
@@ -83,13 +98,13 @@ import HeroImageDesktop from "../assets/image-hero-desktop@2x.webp";
 
     @media screen and (min-width: 768px) {
       position: absolute;
-      right: -228px;
-      top: -132px;
+      right: -300px;
+      top: -182px;
       z-index: 0;
     }
 
     @media screen and (min-width: 1280px) {
-      right: -420px;
+      right: -380px;
       top: -248px;
     }
   }
@@ -99,7 +114,7 @@ import HeroImageDesktop from "../assets/image-hero-desktop@2x.webp";
 
     @media screen and (min-width: 768px) {
       width: auto;
-      height: 584px;
+      height: 732px;
     }
 
     @media screen and (min-width: 1280px) {
